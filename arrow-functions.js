@@ -93,3 +93,63 @@ const sumRest = (a, b, c, ...rest) => {
 }
 let sum7 = sumRest(1, 2, 3, 4, 5, 6);
 console.log(sum7);
+
+
+let ages = [30, 26, 27];
+let [john, mary, joe] = ages;
+console.log(john);
+console.log(mary);
+console.log(joe);
+
+
+
+
+let jobs = {
+    mike: 'designer',
+    jill: 'developer',
+    alicia: 'accountant',
+};
+
+let { mike, jill, alicia } = jobs;
+
+console.log(mike, jill, alicia);
+
+
+let languages = ['english', 'french', 'spanish', 'german', 'japanese'];
+let [johnNative, johnSecondary] = languages;
+console.log(johnNative, johnSecondary);
+
+let [, , maryNative, marySecondary] = languages;
+
+console.log(maryNative, marySecondary);
+
+
+
+
+let languages2 = {
+    firstlanguage: 'english',
+    secondlanguage: 'french',
+    thirdlanguage: 'german',
+    fourthlanguage: 'japanese',
+};
+
+let {firstlanguage, thirdlanguage} = languages2;
+
+console.log(firstlanguage, thirdlanguage);
+
+
+
+let fruits = ['apple', 'orange', 'banana', 'poeach', 'cherry'];
+let [favorite, secondFavorite, ...others] = fruits;
+console.log(favorite);
+console.log(secondFavorite);
+console.log(others);
+
+
+let people = {brian: 'pizza', anna:'pasta', sarah:'vegetarian', andrea: 'steak'};
+
+let{brian, anna, ...rest} = people;
+
+console.log(brian);
+console.log(anna);
+console.log(rest);
